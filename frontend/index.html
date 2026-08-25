@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>วริศรา แซ่ลิ่ม | Portfolio</title>
+  <meta name="description" content="Portfolio ของวริศรา แซ่ลิ่ม (การ์ตูน) นักศึกษาวิศวกรรมปัญญาประดิษฐ์และนวัตกรรมดิจิทัล" />
+
+  <!-- Google Fonts: Space Grotesk สำหรับหัวข้อ, Sarabun สำหรับเนื้อหาภาษาไทย, JetBrains Mono สำหรับตัวเลข/ค่าตัวแปร -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Sarabun:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <span class="navbar__logo-node"></span>
+        วศ<span class="navbar__logo-accent">.</span>
+      </a>
+
+      <nav class="navbar__menu" id="navbarMenu">
+        <a href="#home" class="navbar__link active">หน้าแรก</a>
+        <a href="#about" class="navbar__link">เกี่ยวกับฉัน</a>
+        <a href="#skills" class="navbar__link">ทักษะ</a>
+        <a href="#portfolio" class="navbar__link">ผลงาน</a>
+        <a href="#education" class="navbar__link">การศึกษา</a>
+        <a href="#contact" class="navbar__link">ติดต่อ</a>
+      </nav>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="home">
+    <!-- Canvas สำหรับวาดโครงข่ายเส้นแบบ Neural Network เป็นลายเซ็นของหน้าเว็บ -->
+    <canvas class="hero__network" id="networkCanvas"></canvas>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">สวัสดีค่ะ</p>
+
+      <h1 class="hero__title reveal">
+        ฉันคือ
+        <span class="hero__name">วริศรา แซ่ลิ่ม</span>
+      </h1>
+
+      <p class="hero__nickname reveal">
+        ชื่อเล่น <span class="hero__nickname-tag">การ์ตูน</span>
+      </p>
+
+      <p class="hero__role reveal">
+        <span class="hero__typing" id="typingText"></span><span class="hero__typing-cursor">|</span>
+      </p>
+
+      <p class="hero__desc reveal">
+        หลงใหลในการพัฒนาเทคโนโลยี AI การเขียนโปรแกรม และการสร้างนวัตกรรมดิจิทัล
+        เพื่อแก้ไขปัญหาในโลกจริง
+      </p>
+
+      <div class="hero__actions reveal">
+        <a href="#portfolio" class="btn btn--primary">ดูผลงาน</a>
+        <a href="#contact" class="btn btn--ghost">ติดต่อฉัน</a>
+      </div>
+    </div>
+
+    <div class="hero__avatar reveal">
+      <div class="hero__avatar-ring"></div>
+      <div class="hero__avatar-photo" role="img" aria-label="รูปโปรไฟล์ของวริศรา แซ่ลิ่ม">
+        <img src="0af2869e-5477-491c-a26a-8c30cda0b131.jpg" alt="รูปโปรไฟล์ของวริศรา แซ่ลิ่ม">
+      </div>
+      <span class="hero__avatar-badge">AI Engineering · ชั้นปีที่ 3</span>
+    </div>
+
+    <a href="#about" class="hero__scroll-hint" aria-label="เลื่อนลงเพื่อดูเพิ่มเติม">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ME ===================== -->
+  <section class="section" id="about">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">เกี่ยวกับฉัน</p>
+      <h2 class="section__title reveal">รู้จักฉันให้มากขึ้น</h2>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            ฉันชื่อวริศรา แซ่ลิ่ม ชื่อเล่นการ์ตูน กำลังศึกษาอยู่คณะวิศวกรรมศาสตร์
+            สาขาวิศวกรรมปัญญาประดิษฐ์และนวัตกรรมดิจิทัล ฉันสนใจในการนำเทคโนโลยี AI และ
+            Machine Learning มาประยุกต์ใช้แก้ปัญหาจริง ควบคู่ไปกับการพัฒนาเว็บแอปพลิเคชันและ
+            ระบบ IoT ที่ใช้งานได้จริงในชีวิตประจำวัน ฉันเชื่อว่าการเรียนรู้อย่างต่อเนื่องและ
+            การลงมือทำโปรเจกต์จริงคือหนทางที่ดีที่สุดในการเติบโตเป็นวิศวกรที่มีคุณภาพ
+          </p>
+        </div>
+
+        <div class="about__grid">
+          <div class="info-card tilt reveal">
+            <span class="info-card__label">ชื่อ</span>
+            <span class="info-card__value">วริศรา แซ่ลิ่ม</span>
+          </div>
+          <div class="info-card tilt reveal">
+            <span class="info-card__label">ชื่อเล่น</span>
+            <span class="info-card__value">การ์ตูน</span>
+          </div>
+          <div class="info-card tilt reveal">
+            <span class="info-card__label">คณะ</span>
+            <span class="info-card__value">วิศวกรรมศาสตร์</span>
+          </div>
+          <div class="info-card tilt reveal">
+            <span class="info-card__label">สาขา</span>
+            <span class="info-card__value">วิศวกรรมปัญญาประดิษฐ์และนวัตกรรมดิจิทัล</span>
+          </div>
+          <div class="info-card tilt reveal">
+            <span class="info-card__label">มหาวิทยาลัย</span>
+            <span class="info-card__value">มทร.ศรีวิชัย วิทยาเขตสงขลา</span>
+          </div>
+          <div class="info-card tilt reveal">
+            <span class="info-card__label">ชั้นปี</span>
+            <span class="info-card__value">ปีที่ 3</span>
+          </div>
+          <div class="info-card info-card--wide reveal">
+            <span class="info-card__label">ความสนใจ</span>
+            <div class="info-card__tags">
+              <span class="tag">AI</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Web Development</span>
+              <span class="tag">IoT</span>
+              <span class="tag">Programming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section section--tinted" id="skills">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">ทักษะ</p>
+      <h2 class="section__title reveal">เครื่องมือที่ฉันใช้งาน</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">HTML</span>
+            <span class="skill-card__value" data-target="90">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="90"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">CSS</span>
+            <span class="skill-card__value" data-target="85">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="85"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">JavaScript</span>
+            <span class="skill-card__value" data-target="75">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="75"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">Python</span>
+            <span class="skill-card__value" data-target="88">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="88"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">C++</span>
+            <span class="skill-card__value" data-target="65">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="65"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">SQL</span>
+            <span class="skill-card__value" data-target="70">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="70"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">Machine Learning</span>
+            <span class="skill-card__value" data-target="72">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="72"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">Artificial Intelligence</span>
+            <span class="skill-card__value" data-target="78">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="78"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">IoT</span>
+            <span class="skill-card__value" data-target="68">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="68"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+        <div class="skill-card tilt reveal">
+          <div class="skill-card__head">
+            <span class="skill-card__name">Git &amp; GitHub</span>
+            <span class="skill-card__value" data-target="80">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar__fill" data-fill="80"><span class="skill-bar__node"></span></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section class="section" id="portfolio">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">ผลงาน</p>
+      <h2 class="section__title reveal">โปรเจกต์ที่ผ่านมา</h2>
+
+      <div class="portfolio-grid">
+
+        <article class="project-card tilt reveal">
+          <div class="project-card__thumb project-card__thumb--1">
+            <svg viewBox="0 0 24 24" class="project-card__icon"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 14l10 5 10-5-10-5Z" fill="currentColor"/></svg>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">FloodGuard: ระบบแจ้งเตือนน้ำท่วมอัตโนมัติ</h3>
+            <p class="project-card__desc">ระบบ IoT บน ESP32 ตรวจจับระดับน้ำและตัดไฟฟ้าอัตโนมัติเมื่อเกิดน้ำท่วม พร้อมแดชบอร์ดแสดงผลแบบเรียลไทม์</p>
+            <a href="#" class="project-card__link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal">
+          <div class="project-card__thumb project-card__thumb--2">
+            <svg viewBox="0 0 24 24" class="project-card__icon"><path d="M4 4h16v4H4V4Zm0 6h16v10H4V10Zm2 2v6h5v-6H6Z" fill="currentColor"/></svg>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Lost &amp; Found Management System</h3>
+            <p class="project-card__desc">ระบบจัดการของหายภายในมหาวิทยาลัย ออกแบบฐานข้อมูลและ REST API พร้อมหน้าเว็บสไตล์ Glassmorphism</p>
+            <a href="#" class="project-card__link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal">
+          <div class="project-card__thumb project-card__thumb--3">
+            <svg viewBox="0 0 24 24" class="project-card__icon"><path d="M12 2a5 5 0 0 0-5 5c0 2 1 3 2 4l.5.5V14h5v-2.5l.5-.5c1-1 2-2 2-4a5 5 0 0 0-5-5ZM9 16h6v2H9v-2Zm1 3h4v2h-4v-2Z" fill="currentColor"/></svg>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Smart Plant: ระบบรดน้ำต้นไม้อัจฉริยะ</h3>
+            <p class="project-card__desc">ใช้เซนเซอร์ความชื้นในดินร่วมกับไมโครคอนโทรลเลอร์ ควบคุมการรดน้ำอัตโนมัติผ่านแอปพลิเคชันมือถือ</p>
+            <a href="#" class="project-card__link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal">
+          <div class="project-card__thumb project-card__thumb--4">
+            <svg viewBox="0 0 24 24" class="project-card__icon"><path d="M3 12a9 9 0 1 1 9 9M3 12h9m-9 0 4-4m-4 4 4 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Image Classifier: จำแนกภาพด้วย CNN</h3>
+            <p class="project-card__desc">โมเดล Machine Learning สำหรับจำแนกประเภทของภาพ ฝึกฝนด้วย Python และ TensorFlow บนชุดข้อมูลจริง</p>
+            <a href="#" class="project-card__link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal">
+          <div class="project-card__thumb project-card__thumb--5">
+            <svg viewBox="0 0 24 24" class="project-card__icon"><path d="M4 20V10l8-6 8 6v10h-5v-6H9v6H4Z" fill="currentColor"/></svg>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Campus Explorer: เว็บแนะนำมหาวิทยาลัย</h3>
+            <p class="project-card__desc">เว็บแอปพลิเคชันแนะนำสถานที่และกิจกรรมภายในมหาวิทยาลัย ออกแบบ UI/UX ให้ใช้งานง่ายบนทุกอุปกรณ์</p>
+            <a href="#" class="project-card__link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="project-card tilt reveal">
+          <div class="project-card__thumb project-card__thumb--6">
+            <svg viewBox="0 0 24 24" class="project-card__icon"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.8 2.8M15.2 15.2 18 18M6 18l2.8-2.8M15.2 8.8 18 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Data Mining Dashboard</h3>
+            <p class="project-card__desc">แดชบอร์ดวิเคราะห์ข้อมูลเชิงลึกจากชุดข้อมูลขนาดใหญ่ แสดงผลเป็นกราฟและข้อมูลเชิงสถิติที่เข้าใจง่าย</p>
+            <a href="#" class="project-card__link">View Project <span>→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section class="section section--tinted" id="education">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">การศึกษา</p>
+      <h2 class="section__title reveal">เส้นทางการเรียนรู้</h2>
+
+      <div class="timeline">
+        <div class="timeline__line"></div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__node timeline__node--active"></div>
+          <div class="timeline__card">
+            <span class="timeline__status">กำลังศึกษา</span>
+            <h3 class="timeline__title">ปริญญาตรี คณะวิศวกรรมศาสตร์</h3>
+            <p class="timeline__subtitle">สาขาวิศวกรรมปัญญาประดิษฐ์และนวัตกรรมดิจิทัล</p>
+            <p class="timeline__desc">
+              ศึกษาด้าน Cybersecurity, Web Application Development, Data Analysis and Data Mining,
+              AI and Digital Innovation รวมถึง Advanced Machine Learning ผ่านการทำโปรเจกต์และ
+              แล็บภาคปฏิบัติอย่างต่อเนื่อง
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline__item timeline__item--future reveal">
+          <div class="timeline__node timeline__node--future"></div>
+          <div class="timeline__card timeline__card--future">
+            <span class="timeline__status timeline__status--future">เป้าหมายถัดไป</span>
+            <h3 class="timeline__title">สำเร็จการศึกษา &amp; ก้าวสู่สายงาน AI Engineering</h3>
+            <p class="timeline__desc">มุ่งพัฒนาทักษะเพื่อทำงานหรือฝึกงานในสายงาน AI / Data Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section" id="contact">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">ติดต่อ</p>
+      <h2 class="section__title reveal">มาพูดคุยกัน</h2>
+
+      <div class="contact">
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">ชื่อ</label>
+            <input type="text" id="name" name="name" placeholder="ชื่อของคุณ" autocomplete="name" />
+            <span class="form-error" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">อีเมล</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">ข้อความ</label>
+            <textarea id="message" name="message" rows="5" placeholder="เขียนข้อความถึงฉันที่นี่..."></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">ส่งข้อความ</button>
+          <p class="form-success" id="formSuccess">ขอบคุณสำหรับข้อความค่ะ 🎉 ฉันจะติดต่อกลับโดยเร็วที่สุด</p>
+        </form>
+
+        <div class="contact__side reveal">
+          <p class="contact__side-title">ช่องทางติดต่อ</p>
+
+          <div class="contact-row">
+            <span class="contact-row__icon">
+              <svg viewBox="0 0 24 24"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.2.3 6.3 5.1a1 1 0 0 0 1 0l6.3-5.1a.6.6 0 0 0-.4-1H5.6a.6.6 0 0 0-.4 1Z" fill="currentColor"/></svg>
+            </span>
+            <div class="contact-row__text">
+              <span class="contact-row__label">อีเมล</span>
+              <a href="mailto:toonwarit14@gmail.com" class="contact-row__value">toonwarit14@gmail.com</a>
+            </div>
+            <button type="button" class="contact-row__copy" id="copyEmailBtn" aria-label="คัดลอกอีเมล">
+              <svg viewBox="0 0 24 24"><path d="M8 8h11v11H8V8Zm-3 3h1.5v8.5H14V21H5V11Z" fill="currentColor"/></svg>
+            </button>
+            <span class="contact-row__toast" id="copyToast">คัดลอกแล้ว ✓</span>
+          </div>
+
+          <p class="contact__side-title contact__side-title--sub">โซเชียลมีเดีย</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook: Waritsara Saelim" data-tooltip="Waritsara Saelim">
+              <svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.5c0-.87.24-1.46 1.5-1.46h1.6V4.35C16.3 4.24 15.4 4.15 14.36 4.15c-2.44 0-4.11 1.49-4.11 4.22V10.5H7.75v3h2.5V21h3.25Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn: Waritsara Saelim" data-tooltip="Waritsara Saelim">
+              <svg viewBox="0 0 24 24"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3.5a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92ZM20.5 20h-3.38v-6.08c0-1.45-.03-3.32-2.02-3.32-2.03 0-2.34 1.58-2.34 3.22V20H9.38V8.5h3.24v1.57h.05c.45-.85 1.56-1.75 3.2-1.75 3.43 0 4.06 2.26 4.06 5.2V20Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub" data-tooltip="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.26-.45-1.29.1-2.68 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.39.2 2.42.1 2.68.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram" data-tooltip="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5c2.72 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.07.06 1.4.06 4.12s-.01 3.05-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.07.05-1.4.06-4.12.06s-3.05-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.51 15.05 2.5 14.72 2.5 12s.01-3.05.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.95 2.53c.64-.25 1.37-.42 2.43-.47C9.45 2.01 9.78 2 12 2.5Zm0 2c-2.67 0-2.99.01-4.04.06-.87.04-1.34.18-1.66.31-.42.16-.72.36-1.03.67-.31.31-.51.61-.67 1.03-.13.32-.27.79-.31 1.66C4.24 9.28 4.23 9.6 4.23 12s.01 2.72.06 3.77c.04.87.18 1.34.31 1.66.16.42.36.72.67 1.03.31.31.61.51 1.03.67.32.13.79.27 1.66.31 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.87-.04 1.34-.18 1.66-.31.42-.16.72-.36 1.03-.67.31-.31.51-.61.67-1.03.13-.32.27-.79.31-1.66.05-1.05.06-1.37.06-3.77s-.01-2.72-.06-3.77c-.04-.87-.18-1.34-.31-1.66a2.8 2.8 0 0 0-.67-1.03 2.8 2.8 0 0 0-1.03-.67c-.32-.13-.79-.27-1.66-.31C14.99 4.51 14.67 4.5 12 4.5Zm0 3.4a4.1 4.1 0 1 1 0 8.2 4.1 4.1 0 0 1 0-8.2Zm0 2a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2Zm4.3-2.6a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92Z" fill="currentColor"/></svg>
+            </a>
+          </div>
+
+          <p class="contact__note">มหาวิทยาลัยเทคโนโลยีราชมงคลศรีวิชัย วิทยาเขตสงขลา · ชั้นปีที่ 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p>© <span id="currentYear"></span> Waritsara Saelim — All Rights Reserved</p>
+  </footer>
+
+  <!-- ปุ่มเลื่อนกลับขึ้นด้านบน -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="เลื่อนกลับขึ้นด้านบน">↑</button>
+
+  <!-- Custom Cursor: วงแหวนตามเมาส์ + จุดกลาง (ทำงานเฉพาะอุปกรณ์ที่มีเมาส์) -->
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Canvas สำหรับ Particle Trail ที่ลอยตามการเคลื่อนไหวของเมาส์ทั่วทั้งหน้า -->
+  <canvas class="particle-trail" id="particleCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
